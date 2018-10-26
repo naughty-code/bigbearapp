@@ -38,16 +38,4 @@ $(document).ready(function() {
 			})
 	}
 	search();
-	let dataSet = [
-		['idvrm', 'id', 'name',	'website', 'descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription', 'address', 'location', 'bedrooms', 'occupancy', 'tier', 'status'],
-		['idvrm', 'id', 'name',	'website', 'description', 'address', 'location', 'bedrooms', 'occupancy', 'tier', 'status'],
-		['idvrm', 'id', 'name',	'website', 'description', 'address', 'location', 'bedrooms', 'occupancy', 'tier', 'status'],
-		['idvrm', 'id', 'name',	'website', 'description', 'address', 'location', 'bedrooms', 'occupancy', 'tier', 'status']
-	]
-} );
-
-
-
-
-
-
+});
