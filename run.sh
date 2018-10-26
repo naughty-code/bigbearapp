@@ -1,3 +1,2 @@
-export FLASK_APP=server.py
-export FLASK_ENV=development
+while read i ; do $i ; done < '.env'
 flask run
