@@ -10,18 +10,10 @@ load_dotenv()
 app = Flask(__name__, static_url_path='')
 CORS(app)
 
-<<<<<<< HEAD
 @app.route('/api')
 def api():
     connection = psycopg2.connect(dbname=os.getenv('DB_NAME'), user=os.getenv('DB_USERNAME'), password=os.getenv('DB_PASSWORD'), host=os.getenv('DB_HOST'), port=os.getenv('DB_PORT'))
     cursor = connection.cursor()
-=======
-connection = psycopg2.connect(dbname='d4pp6fmbq2237a', user='hseahwenpwiswg', password='2e56524af38f5e01ed406d57e3631d05782128a2239fca9ca7ebeb05014cb638', host='ec2-184-73-169-151.compute-1.amazonaws.com', port='5432')
-cursor = connection.cursor()
-
-@app.route('/api/cabins')
-def cabins():
->>>>>>> 40be8d42a47cfe2b4ebc73551b288cec9f2465ae
     cursor.execute('SELECT * FROM db.cabin')
     data = cursor.fetchall()
     return jsonify(data)
