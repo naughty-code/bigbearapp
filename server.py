@@ -5,11 +5,12 @@ from flask import jsonify
 import os
 
 DATABASE_URL = os.environ['DATABASE_URL']
+DB_SSL_MODE = os.getenv('DB_SSL_MODE')
 
 app = Flask(__name__, static_url_path='')
 CORS(app)
 
-connection = psycopg2.connect(DATABASE_URL, sslmode='require')
+connection = psycopg2.connect(DATABASE_URL, sslmode=DB_SSL_MODE)
 cursor = connection.cursor()
 
 @app.route('/api/cabins')
