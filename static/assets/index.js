@@ -4,7 +4,7 @@ $(document).ready(function() {
 		var progressBar = $('.progress')
 		progressBar.removeClass('d-none')
 		alertError.addClass('d-none')
-		$.get('http://200.75.100.135:5000/api')
+		$.get('https://bigbearcabinsapp-api-heroku.herokuapp.com/api')
 			.done(function( data ) {
 				progressBar.addClass('d-none')
 				$('#example').DataTable( {
