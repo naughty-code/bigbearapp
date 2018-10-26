@@ -45,3 +45,9 @@ $(document).ready(function() {
 		['idvrm', 'id', 'name',	'website', 'description', 'address', 'location', 'bedrooms', 'occupancy', 'tier', 'status']
 	]
 } );
+
+
+
+
+
+
