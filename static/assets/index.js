@@ -1,13 +1,14 @@
 $(document).ready(function() {
 	function search() {
-		var alertError = $('.alert-danger')
-		var progressBar = $('.progress')
-		progressBar.removeClass('d-none')
-		alertError.addClass('d-none')
-		$.get('https://bigbearcabinsapp-api-heroku.herokuapp.com/api')
+		var alertErrorCabins = $('#alert-danger-cabins')
+		var progressBarCabins = $('#progress-cabins')
+		progressBarCabins.removeClass('d-none')
+		alertErrorCabins.addClass('d-none')
+
+		$.get('/api/cabins')
 			.done(function( data ) {
-				progressBar.addClass('d-none')
-				$('#example').DataTable( {
+				progressBarCabins.addClass('d-none')
+				$('#cabins').DataTable( {
 					data: data,
 					columns: [
 						{ title: "IDVRM" },
@@ -33,8 +34,8 @@ $(document).ready(function() {
 				$('[data-toggle="tooltip"]').tooltip();
 			})
 			.fail(function() {
-				progressBar.addClass('d-none')
-				alertError.removeClass('d-none')
+				progressBarCabins.addClass('d-none')
+				alertErrorCabins.removeClass('d-none')
 			})
 	}
 	search();
